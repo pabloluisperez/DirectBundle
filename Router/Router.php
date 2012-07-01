@@ -44,6 +44,10 @@ class Router
         $this->request = new Request($container->get('request'));
         $this->response = new Response($this->request->getCallType());
     }
+    
+    public function getRequestType(){
+        return $this->response->getType();
+    }
 
     /**
      * Do the ExtDirect routing processing.

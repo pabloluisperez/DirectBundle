@@ -38,7 +38,13 @@ class DirectController extends Controller
 
         // create response
         $response = new Response($router->route());
-        $response->headers->set('Content-Type', 'application/json');
+        $type = $router->getRequestType();
+        
+        if ('form' == $type && $_REQUEST['extUpload'] === 'true') {
+            //do nothing
+        } else {
+            $response->headers->set('Content-Type', 'application/json');
+        }
         
         return $response;
     }
