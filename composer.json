@@ -14,7 +14,7 @@
         "symfony/framework-bundle": "2.*"
     },
     "autoload": {
-        "psr-0": { "Neton\\DirectBundle": "" }
+        "psr-0": { "Neton\\DirectBundle": ""  }
     },
-    "target-dir": ""
+    "target-dir": "Neton/DirectBundle"
 }
