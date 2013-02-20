@@ -33,14 +33,14 @@ class Response
      */
     public function encode($result)
     {
-        if ('form' == $this->type) {
+      /*  if ('form' == $this->type) {
             //array_walk_recursive($result[0], array($this, 'utf8'));
             return "<html><body><textarea>".json_encode($result[0])."</textarea></body></html>";
-        } else {
+        } else {*/
             // @todo: check utf8 config option from bundle
             //array_walk_recursive($result, array($this, 'utf8'));
             return json_encode($result);
-        }
+        //}
     }
 
     /**
